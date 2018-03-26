@@ -70,11 +70,11 @@ void simpleLogger::log(int logLevel, const char* format, ...){
 	logToXml(record);
 }
 
-float simpleLogger::getWidth(){
+float simpleLogger::getWidth() const{
    return 0;
 }
 
-float simpleLogger::getHeight(){
+float simpleLogger::getHeight() const{
 	return 0;
 }
 
@@ -106,7 +106,7 @@ void simpleLogger::saveFile(){
 }
 
 //-----------------------------------------------.
-void simpleLogger::draw(float x, float y){
+void simpleLogger::draw(float x, float y) const{
 	ofPushStyle();
 		float yPos = 0;
 		for(int i = logs.size()-1; i >= 0; i--){
@@ -118,7 +118,7 @@ void simpleLogger::draw(float x, float y){
 }
 
 //-----------------------------------------------.
-void simpleLogger::draw(float x, float y, float width, float height){
+void simpleLogger::draw(float x, float y, float width, float height) const{
 	ofPushStyle();
 		float yPos = 0;
 		for(int i = logs.size()-1; i >= 0; i--){
